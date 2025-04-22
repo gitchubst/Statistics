@@ -1,0 +1,63 @@
+Apple=[]
+
+
+def Clean_and_Data_Yahoo_Finance_File_In_Loop(GitChub, If_Loop):
+  Break_And_Continue=[]
+  Data=open(If_Loop)
+  Content=Data.read()
+  Line=Data.readlines()
+  CL=Content.split("\n")
+  x=0
+  y=len(CL)
+  b=[]
+  while (x<y):
+    In_Element=CL[x]
+    CLS=In_Element.split()
+    xx=0
+    yy=len(CLS)
+    while (xx<yy):
+      yeet=CLS[xx]
+      CLSS=list(yeet)
+      xxx=0
+      yyy=len(CLSS)
+      while (xxx<yyy):
+        weet=CLSS[xxx]
+        if weet=="D":
+          b.append(x)
+        xxx=xxx+1
+      xx=xx+1
+    x=x+1
+  c=len(b)
+  d=0
+  while (d<c):
+    bd=b[d]
+    v=bd-d
+    m=CL[v]
+    CL.remove(m)
+    d=d+1
+  Dset=[]
+  for SR in CL:
+    Dsets=SR.replace("\t", " ")
+    Dset.append(Dsets)
+  Len_of_Dset=len(Dset)
+  Index=0
+  while (Index<Len_of_Dset):
+    GitBase=[]
+    Inidex=Dset[Index]
+    GitBase=Inidex.split()
+    Goat=0
+    Len_of_GitBase=len(GitBase)
+    GitFloat=[]
+    while (Goat<Len_of_GitBase):
+      R=GitBase[Goat]
+      O=float(R)
+      GitFloat.append(O)
+      Goat=Goat+1
+    AB=GitFloat[0]
+    CD=GitFloat[1]
+    EF=CD/AB
+    GH=EF-1
+    IJ=GH*100
+    GitChub.append(IJ)
+    Index=Index+1
+Clean_and_Data_Yahoo_Finance_File_In_Loop(Apple, "/Users/shantanu/Documents/Python/Stocks/Yahoo_Finance_Stock/Data/Final_Data/Apple_Stock_Data.txt")
